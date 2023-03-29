@@ -27,7 +27,6 @@
                         </page>
                         <page string="Dealers">
                             <group>
-                                <!-- <field name="company_name"/> -->
                                 <field name="dealer_ids"/>
                             </group>
                         </page>
@@ -51,6 +50,7 @@
                 <field name="establish_date"/>
                 <field name="owner_name"/>
                 <field name="product_catagory"/>
+
             </tree>
         </field>
     </record>

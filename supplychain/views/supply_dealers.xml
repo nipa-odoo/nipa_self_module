@@ -1,13 +1,24 @@
 <?xml version="1.0"?>
 <odoo>
 
+    <record id="dealers_action" model="ir.actions.act_window">
+        <field name="name">supply dealers</field>
+        <field name="res_model">supply.dealers</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="supply_dealers_tree" model="ir.ui.view">
         <field name="name">Supply dealers</field>
         <field name="model">supply.dealers</field>
         <field name="arch" type="xml">
-            <tree string="dealer">
-                <!-- <field name="dealer_ids"/> -->
+            <tree editable="bottom">
                 <field name="name"/>
+                <field name="state"/>
+                <field name="catagory"/>
+                <button name="action_Accepted" string="Accepted" type="object" icon="fa-check" />
+                <button name="action_Rejected" string="Rejected" type="object" icon="fa-times" />
+                <field name="quantity"/>
+                <field name="product_ids"/>
             </tree>
         </field>
     </record>
