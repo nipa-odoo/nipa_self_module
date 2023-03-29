@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="supply_view_form" model="ir.ui.view">
+        <field name="name">Supply Chain</field>
+        <field name="model">supply.chain</field>
+        <field name="arch" type="xml">
+            <form string="supply">
+                <sheet>
+                    <h1>Company Details</h1><br/>
+                    <group>
+                        <group>
+                            <field name="company_name"/>
+                            <field name="address"/>
+                            <field name="establish_date"/>
+                        </group>
+                        <group>
+                            <field name="owner_name"/>
+                            <field name="registration_number"/>
+                            <field name="product_catagory"/>
+                        </group>
+                    </group><br/>
+                    <notebook>
+                        <page string="Products">
+                            <group>
+                                <field name="product_ids"/>
+                            </group>
+                        </page>
+                        <page string="Dealers">
+                            <group>
+                                <!-- <field name="company_name"/> -->
+                                <field name="dealer_ids"/>
+                            </group>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <field name="company_name"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="supply_view_tree" model="ir.ui.view">
+        <field name="name">Supply chain</field>
+        <field name="model">supply.chain</field>
+        <field name="arch" type="xml">
+            <tree string="tree">
+                <field name="company_name"/>
+                <field name="establish_date"/>
+                <field name="owner_name"/>
+                <field name="product_catagory"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="supply_action_1" model="ir.actions.act_window">
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Records Found
+            </p>
+        </field>
+        <field name="name">Supply</field>
+        <field name="res_model">supply.chain</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

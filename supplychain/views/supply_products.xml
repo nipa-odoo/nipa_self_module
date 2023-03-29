@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="supply_product_tree" model="ir.ui.view">
+        <field name="name">Supply Products</field>
+        <field name="model">supply.products</field>
+        <field name="arch" type="xml">
+            <tree string="tree">
+                <field name="name"/>
+                <field name="quantity"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

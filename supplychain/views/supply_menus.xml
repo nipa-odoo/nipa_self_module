@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+    <menuitem id="supply_root_menu" name="Supply Chain" action="supply_action_1" web_icon="supplychain,static/description/supply_chain.png">
+
+    </menuitem>
+</odoo>
