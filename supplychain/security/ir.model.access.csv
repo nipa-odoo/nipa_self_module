@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 supplychain.access_supply_chain,access_supply_chain,supplychain.model_supply_chain,base.group_user,1,1,1,1
 supplychain.access_supply_products,access_supply_products,supplychain.model_supply_products,base.group_user,1,1,1,1
 supplychain.access_supply_dealers,access_supply_dealers,supplychain.model_supply_dealers,base.group_user,1,1,1,1
+supplychain.access_supply_wholesaler,access_supply_wholesaler,supplychain.model_supply_wholesaler,base.group_user,1,1,1,1
+supplychain.access_supply_store,access_supply_store,supplychain.model_supply_store,base.group_user,1,1,1,1

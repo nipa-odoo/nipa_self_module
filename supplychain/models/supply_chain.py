@@ -1,4 +1,5 @@
 from odoo import models,fields
+from odoo.exceptions import UserError , ValidationError
 
 class Supply_chain(models.Model):
     _name = "supply.chain"
@@ -13,5 +14,5 @@ class Supply_chain(models.Model):
     product_catagory = fields.Char()
     product_ids = fields.One2many('supply.products','company_id',string="Products")
     quantity = fields.Integer()
-    dealer_ids = fields.Many2many("supply.dealers",string="dealers")
+    dealer_ids = fields.One2many("supply.dealers",'company_id',string="dealers")
 

@@ -11,15 +11,33 @@
         <field name="name">Supply dealers</field>
         <field name="model">supply.dealers</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <tree>
                 <field name="name"/>
                 <field name="state"/>
                 <field name="catagory"/>
-                <button name="action_Accepted" string="Accepted" type="object" icon="fa-check" />
-                <button name="action_Rejected" string="Rejected" type="object" icon="fa-times" />
-                <field name="quantity"/>
                 <field name="product_ids"/>
             </tree>
+        </field>
+    </record>
+
+
+    <record id="supply_dealers_form" model="ir.ui.view">
+        <field name="name">Supply dealers</field>
+        <field name="model">supply.dealers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="state"/>
+                        <field name="catagory"/>
+                    </group>
+                    <group>
+                        <field name="product_ids"/>
+                        <button name="action_confirm" string="Confirm" type="object" icon="fa-check"/>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="demo_data" model="supply.chain">
+        <field name="company_name">Decore</field>
+        <field name="address">Gandhinagar</field>
+        <field name="owner_name">Harsh</field>
+        <field name="registration_number">100056</field>
+        <field name="product_catagory">Food</field>
+        <field name="establish_date">2002-02-22</field>
+    </record>
+
+    <record id="demo_data_dealer" model="supply.dealers">
+        <field name="name">Rutvik</field>
+        <field name="state">Gujarat</field>
+        <field name="catagory">Food</field>
+    </record>
+
+    <record id="demo_data_dealer1" model="supply.dealers">
+        <field name="name">Hardik</field>
+        <field name="state">Delhi</field>
+        <field name="catagory">Food</field>
+    </record>
+
+    <record id="demo_data_dealer2" model="supply.dealers">
+        <field name="name">Apan</field>
+        <field name="state">Maharastra</field>
+        <field name="catagory">Food</field>
+    </record>
+
+    <record id="demo_data_product" model="supply.products">
+        <field name="name">Biscuite</field>
+        <field name="quantity">100</field>
+    </record>
+
+</odoo>

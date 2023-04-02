@@ -3,10 +3,14 @@
     <menuitem id="supply_root_menu" name="Supply Chain" action="supply_action_1" web_icon="supplychain,static/description/supply_chain.png">
 
         <menuitem id="supply_first_level_menu" name="Distributer">
-            <menuitem id="supply_menu_action" name="Dealers" action="dealers_action" />
+            <menuitem id="supply_menu_action_1" name="Dealers" action="dealers_action" />
+            <menuitem id="supply_menu_action_2" name="Wholesalers" action="wholesaler_action" />
         </menuitem>
 
-        <menuitem id="supply_second_level_menu" name="Products" action="product_action">
+        <menuitem id="supply_second_level_menu_1" name="Products" action="product_action">
+        </menuitem>
+
+        <menuitem id="supply_second_level_menu_2" name="Stores" action="store_action">
         </menuitem>
 
     </menuitem>
