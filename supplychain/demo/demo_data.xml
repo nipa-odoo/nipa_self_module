@@ -10,6 +10,15 @@
         <field name="establish_date">2002-02-22</field>
     </record>
 
+    <record id="demo_data_1" model="supply.chain">
+        <field name="company_name">Foodies</field>
+        <field name="address">Ahmedabad</field>
+        <field name="owner_name">Nisarg</field>
+        <field name="registration_number">100187</field>
+        <field name="product_catagory">Food</field>
+        <field name="establish_date">1992-02-12</field>
+    </record>
+
     <record id="demo_data_dealer" model="supply.dealers">
         <field name="name">Rutvik</field>
         <field name="state">Gujarat</field>

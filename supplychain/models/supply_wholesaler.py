@@ -6,3 +6,5 @@ class Supply_wholesaler(models.Model):
     _description="Supply wholesaler"
 
     name=fields.Char()
+    city=fields.Char()
+    

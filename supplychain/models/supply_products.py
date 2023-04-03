@@ -8,6 +8,5 @@ class Supply_products(models.Model):
     name=fields.Char()
     company_id = fields.Many2one('supply.chain')
     quantity = fields.Integer()
-    # product_ids = fields.Many2one("supply.dealers")
     
                 

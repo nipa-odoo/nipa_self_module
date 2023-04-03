@@ -14,14 +14,16 @@ class Supply_dealers(models.Model):
     dealer_ids = fields.Many2one("supply.chain", string="dealers")
 
     def action_confirm(self):
-        if self.quantity > self.product_ids.quantity:
-            raise ValidationError(_("Quanntity Error"))
-        else:
-            self.product_ids.quantity = self.product_ids.quantity - self.quantity
+        for record in self.quantity:
+            if record.quantity < record.product_ids.quantity:
+                record.product_ids.quantity = record.product_ids.quantity - record.quantity
+            else:
+                raise ValidationError(_("Quanntity Error"))            
 
-    # def action_Rejected(self):
-    #     for record in self:
-    #         record.status = "rejected"
+        # if self.quantity > self.product_ids.quantity:
+        #     raise ValidationError(_("Quanntity Error"))
+        # else:
+        #     self.product_ids.quantity = self.product_ids.quantity - self.quantit
 
 
     # def action_Accepted(self):

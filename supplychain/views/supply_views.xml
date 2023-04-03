@@ -65,5 +65,7 @@
         <field name="res_model">supply.chain</field>
         <field name="view_mode">tree,form</field>
     </record>
+    
+   
 
 </odoo>

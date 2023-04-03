@@ -7,6 +7,7 @@ class Supply_chain(models.Model):
     _rec_name = "company_name"
 
     company_name = fields.Char()
+    active = fields.Boolean(default = True)
     address = fields.Char()
     owner_name = fields.Char()
     registration_number = fields.Integer()
@@ -14,5 +15,5 @@ class Supply_chain(models.Model):
     product_catagory = fields.Char()
     product_ids = fields.One2many('supply.products','company_id',string="Products")
     quantity = fields.Integer()
-    dealer_ids = fields.One2many("supply.dealers",'company_id',string="dealers")
+    dealer_ids = fields.Many2many("supply.dealers",string="dealers")
 
