@@ -18,8 +18,8 @@
                             <field name="registration_number"/>
                             <field name="product_catagory"/>
                         </group>
-                    </group><br/>
-                    <notebook>
+                    </group>
+                    <notebook><br/>
                         <page string="Products">
                             <group>
                                 <field name="product_ids"/>
@@ -65,7 +65,4 @@
         <field name="res_model">supply.chain</field>
         <field name="view_mode">tree,form</field>
     </record>
-    
-   
-
 </odoo>

@@ -12,8 +12,8 @@
          'views/supply_views.xml',
          'views/supply_products.xml',
          'views/supply_dealers.xml',
-         'views/supply_wholesaler.xml',
          'views/supply_store.xml',
+         'views/supply_wholesaler.xml',
          'views/supply_menus.xml'
     ],
     # data files containing optionally loaded demonstration data

@@ -13,20 +13,32 @@
         <field name="model">supply.products</field>
         <field name="arch" type="xml">
             <tree string="tree">
+                <field name="create_for" invisible="1"/>
                 <field name="name"/>
-                <field name="quantity"/>
+                <field name="quantity" attrs="{'invisible': [('create_for','=','store')] }"/>
+                <field name="required_quantity" attrs="{'invisible': [('create_for','=','company')] }"/>
             </tree>
         </field>
     </record>
 
-    <record id="supply_product_search" model="ir.ui.view">
+    <record id="supply_product_form" model="ir.ui.view">
         <field name="name">Supply Products</field>
         <field name="model">supply.products</field>
         <field name="arch" type="xml">
-            <search>
-                <field name="company_id" invisible="1"/>
-                <filter string="Available" name="available" domain="[('company_id', '=', 'company_id.company_name')]"/>
-            </search> 
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="create_for"/>
+                            <field name="company_id" attrs="{'invisible': [('create_for','=','store')] }"/>
+                            <field name="store_id" attrs="{'invisible': [('create_for','=','company')] }"/>
+                            <field name="quantity" attrs="{'invisible': [('create_for','=','store')] }"/>
+                            <field name="required_quantity" attrs="{'invisible': [('create_for','=','company')] }"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
         </field>
     </record>
 

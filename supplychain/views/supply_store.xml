@@ -12,4 +12,46 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record id="supply_store_view_form" model="ir.ui.view">
+        <field name="name">Supply Store</field>
+        <field name="model">supply.store</field>
+        <field name="arch" type="xml">
+            <form string="supply">
+                <sheet>
+                    <h1>Store Details</h1>
+                    <br/>
+                    <group>
+                        <group>
+                            <field name="store_name"/>
+                            <field name="address"/>
+                            <field name="establish_date"/>
+                        </group>
+                        <group>
+                            <field name="owner_name"/>
+                            <field name="registration_number"/>
+                            <field name="shop_catagory"/>
+                        </group>
+                    </group>
+                    <br/>
+                    <notebook>
+                        <page string="Products">
+                            <group>
+                                <field name="product_ids"/>
+                            </group>
+                        </page>
+                        <page string="Wholesaler">
+                            <group>
+                                <field name="wholesaler_ids"/>
+                            </group>
+                        </page>
+                        <page string="Other Info">
+                            <group>
+                                <field name="store_name"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
 </odoo>
